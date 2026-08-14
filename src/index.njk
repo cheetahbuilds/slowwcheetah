@@ -1,0 +1,249 @@
+---
+layout: base.njk
+title: Home
+---
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <img src="/CheetahLogo.png" alt="Sloww Cheetah Logo" class="hero-logo" />
+    <p class="hero-eyebrow">Vadodara · Roads · Trails · Miles</p>
+    <h1 class="hero-title">SLOWW<br/><em>CHEETAH</em></h1>
+    <p class="hero-tagline">{{ settings.tagline }}</p>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- Marquee Strip 1 -->
+<div class="gear-strip">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span> Long Distance Cycling</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Running</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Day Treks</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Vadodara Roads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Pavagadh</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Champaner</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Sloww Philosophy</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Travelling</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Chase Adventure</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Zarwani Falls</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span> Long Distance Cycling</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Running</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Day Treks</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Vadodara Roads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Pavagadh</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Champaner</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Sloww Philosophy</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Travelling</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Chase Adventure</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Zarwani Falls</span>
+  </div>
+</div>
+
+<!-- Philosophy -->
+<section id="philosophy">
+  <div class="section-inner">
+    <span class="philosophy-label reveal">The Sloww Manifesto</span>
+    <p class="philosophy-quote reveal reveal-delay-1">
+      Speed is overrated. The best views are earned slowly, the best roads are discovered accidentally, and the best mornings start before the rest of the city wakes up.
+    </p>
+    <p class="philosophy-body reveal reveal-delay-2">
+      {{ settings.about_text }}
+    </p>
+    <div class="philosophy-accent"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <img
+          src="https://images.unsplash.com/photo-1682687220499-d9c06b872b5b?auto=format&fit=crop&q=80&w=800"
+          alt="Cycling on a quiet road" class="about-img-main"
+        />
+        <div class="about-badge">
+          <span class="about-badge-num">5+</span>
+          <span class="about-badge-text">years on the road</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label reveal">About Me</span>
+        <h2 class="about-heading reveal reveal-delay-1">
+          Cycling roads,<br/>running rivers,<br/><em>climbing forts.</em>
+        </h2>
+        <p class="about-para reveal reveal-delay-2">
+          Based in Vadodara, Gujarat. I ride long distances, run medium ones, and spend weekends on one-day treks around central Gujarat. Not chasing podiums — chasing the feeling.
+        </p>
+        <p class="about-para reveal reveal-delay-2">
+          Every outing goes in the journal. Every route gets mapped. Every chai stop gets remembered.
+        </p>
+        <div class="about-stats reveal reveal-delay-3">
+          <div class="stat-item">
+            <div class="stat-num">{{ settings.stat_km_cycled }}<span>+</span></div>
+            <div class="stat-label">km cycled</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">{{ settings.stat_km_run }}<span>+</span></div>
+            <div class="stat-label">km run</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">{{ settings.stat_treks }}<span>+</span></div>
+            <div class="stat-label">day treks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Milestones -->
+<section id="milestones">
+  <div class="section-inner">
+    <div class="milestones-header">
+      <span class="section-label reveal">What I Do</span>
+      <h2 class="milestones-heading reveal reveal-delay-1">Three ways to<br/><em>earn the view</em></h2>
+    </div>
+    <div class="cards-grid">
+      <div class="activity-card reveal">
+        <span class="card-icon">🚴</span>
+        <span class="card-number">01 — Cycling</span>
+        <h3 class="card-title">Long-distance roads</h3>
+        <p class="card-body">Road rides from 60 km to full-day epics. The route to Dabhoi, the climb past Champaner, the early-morning highways out of Vadodara when traffic hasn't started yet.</p>
+        <span class="card-achievement">{{ settings.stat_km_cycled }}+ km logged</span>
+      </div>
+      <div class="activity-card reveal reveal-delay-1">
+        <span class="card-icon">🏃</span>
+        <span class="card-number">02 — Running</span>
+        <h3 class="card-title">Medium-distance miles</h3>
+        <p class="card-body">10 km to half-marathon range. The riverfront in monsoon. The park loops before sunrise. The kind of runs that fix your thinking for the rest of the day.</p>
+        <span class="card-achievement">{{ settings.stat_km_run }}+ km on foot</span>
+      </div>
+      <div class="activity-card reveal reveal-delay-2">
+        <span class="card-icon">🥾</span>
+        <span class="card-number">03 — Trekking</span>
+        <h3 class="card-title">One-day summits</h3>
+        <p class="card-body">Day treks only — Pavagadh, Zarwani, Ratanmahal. Out before dawn, back before dark. No overnight gear, no permits, just a good pair of shoes and a packed lunch.</p>
+        <span class="card-achievement">{{ settings.stat_treks }}+ treks completed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trail Journal — dynamic loop -->
+<section id="journal">
+  <div class="section-inner">
+    <div class="journal-grid">
+      <div class="journal-sticky">
+        <span class="journal-label reveal">Road &amp; Trail Journal</span>
+        <h2 class="journal-title reveal reveal-delay-1">Stories from<br/>the road</h2>
+        <p class="journal-intro reveal reveal-delay-2">
+          Every ride, run, and trek near Vadodara has its own texture — a stretch of empty highway, a forest path, a stone fort at sunrise. These are a few of those mornings.
+        </p>
+        <a href="/journal/" class="journal-view-all reveal reveal-delay-3">View all entries →</a>
+      </div>
+
+      <div class="journal-entries">
+        {%- for post in collections.posts | slice(0, 4) -%}
+        <div class="journal-entry reveal">
+          <div class="entry-date">{{ post.data.category }}</div>
+          <div>
+            <h4 class="entry-title">
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h4>
+            <p class="entry-text">{{ post.data.description }}</p>
+            <span class="entry-tag">{{ post.data.category }}</span>
+          </div>
+        </div>
+        {%- endfor -%}
+
+        {%- if collections.posts | length == 0 -%}
+        <p style="color:var(--text-mid); padding: 40px 0; font-style:italic;">
+          No journal entries yet — publish your first post in the CMS at <a href="/admin/" style="color:var(--ember);">/admin</a>.
+        </p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee Strip 2 -->
+<div class="gear-strip">
+  <div class="marquee-track" style="animation-direction: reverse;">
+    <span class="marquee-item"><span class="marquee-dot"></span> Chase Adventure</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Not Speed</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Vadodara to Anywhere</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Go Sloww</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Pavagadh Trails</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Gujarat Roads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Earn Every View</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Chase Adventure</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Not Speed</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Vadodara to Anywhere</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Go Sloww</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Pavagadh Trails</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Gujarat Roads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Earn Every View</span>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="section-label reveal">Connect With Me</span>
+        <h2 class="contact-heading reveal reveal-delay-1">
+          Planning a ride<br/><em>or a day trek?</em>
+        </h2>
+        <p class="contact-sub reveal reveal-delay-2">
+          Based in Vadodara. Always up for talking cycling routes, trail suggestions around Gujarat, or sharing notes on gear. Whether you're local or passing through — let's connect.
+        </p>
+        <div class="contact-items reveal reveal-delay-3">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(196,169,125,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="rgba(196,169,125,0.8)" stroke="none"/></svg>
+            </div>
+            <a href="https://www.instagram.com/sloww_cheetah/" target="_blank" rel="noopener" class="contact-detail">@sloww_cheetah</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(196,169,125,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.46C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="rgba(196,169,125,0.8)" stroke="none"/></svg>
+            </div>
+            <a href="https://www.youtube.com/@SlowwCheetah" target="_blank" rel="noopener" class="contact-detail">Sloww Cheetah on YouTube</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">Vadodara, Gujarat, India</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-1">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="Trail Name?" id="fname" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Email</label>
+            <input type="email" class="form-input" placeholder="you@adventure.com" id="femail" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input" placeholder="Tell me about your route idea, trail question, or just say hello..." id="fmessage"></textarea>
+        </div>
+        <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">Send Message →</button>
+        <div class="form-success" id="formSuccess">
+          Message received. I'll be in touch between rides.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

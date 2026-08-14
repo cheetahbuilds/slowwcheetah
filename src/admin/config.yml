@@ -1,0 +1,135 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images get stored in the repo
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Show live preview while editing
+site_url: "https://slowwcheetah.netlify.app"
+
+collections:
+  # ── Journal Posts ─────────────────────────────────────────────────
+  - name: "posts"
+    label: "Journal Entries"
+    label_singular: "Journal Entry"
+    folder: "src/posts"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "posts/{{slug}}"
+    summary: "{{title}} — {{category}} · {{date}}"
+    sortable_fields: ["date", "title", "category"]
+    view_filters:
+      - label: "Cycling"
+        field: category
+        pattern: "Cycling"
+      - label: "Running"
+        field: category
+        pattern: "Running"
+      - label: "Trekking"
+        field: category
+        pattern: "Trekking"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "The headline for this journal entry"
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        default: ""
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "🚴 Cycling",   value: "Cycling" }
+          - { label: "🏃 Running",   value: "Running" }
+          - { label: "🥾 Trekking",  value: "Trekking" }
+
+      - label: "Short description"
+        name: "description"
+        widget: "text"
+        hint: "2–3 sentence teaser shown on the homepage journal list"
+
+      - label: "Cover image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+        hint: "Shown at the top of the full post page (1400×600px ideal)"
+
+      - label: "Distance"
+        name: "distance"
+        widget: "string"
+        required: false
+        hint: "e.g. 80 km"
+
+      - label: "Duration"
+        name: "duration"
+        widget: "string"
+        required: false
+        hint: "e.g. 4h 20m"
+
+      - label: "Elevation gain"
+        name: "elevation"
+        widget: "string"
+        required: false
+        hint: "e.g. 320 m — leave blank for flat rides"
+
+      - label: "Difficulty"
+        name: "difficulty"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Easy",        value: "Easy" }
+          - { label: "Moderate",    value: "Moderate" }
+          - { label: "Challenging", value: "Challenging" }
+          - { label: "Hard",        value: "Hard" }
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Full post content — supports headings, bold, images, and blockquotes"
+
+  # ── Site Settings (homepage stats & tagline) ──────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "src/_data/settings.json"
+        fields:
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+            default: "Chase adventure, not speed."
+
+          - label: "About paragraph"
+            name: "about_text"
+            widget: "text"
+            hint: "Short paragraph shown in the About section"
+
+          - label: "km cycled (stat)"
+            name: "stat_km_cycled"
+            widget: "string"
+            default: "4,200"
+
+          - label: "km run (stat)"
+            name: "stat_km_run"
+            widget: "string"
+            default: "412"
+
+          - label: "Day treks (stat)"
+            name: "stat_treks"
+            widget: "string"
+            default: "18"
+
+          - label: "Sunrises (stat)"
+            name: "stat_sunrises"
+            widget: "string"
+            default: "34"
