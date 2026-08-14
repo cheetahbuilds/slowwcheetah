@@ -3,7 +3,9 @@ const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
   // Pass through static assets unchanged
   eleventyConfig.addPassthroughCopy("src/admin");
-  eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPassthroughCopy({
+  "public": "/"
+});
 
   // Date filter for templates  e.g. {{ date | date("d MMM yyyy") }}
   eleventyConfig.addFilter("date", (dateVal, format) => {
